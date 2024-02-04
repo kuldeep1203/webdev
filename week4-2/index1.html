@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div>
+        <input type="text" id = "title" placeholder="tile">
+        <input type="text" id = "description" placeholder="description">
+        <br>
+        <!-- <button onclick="addtodo()">Add to do</button> -->
+        <div id = "container"></div>
+    </div>
+    
+</body>
+<script>
+    let id = 0;
+    function markasDone(ID){
+      
+       
+        const parent = document.getElementById(ID);
+        parent.children[2].innerHTML="Done";
+        
+    }
+    function createchild(title,description,id){
+        const outerdiv = document.createElement("div");//create element in memory and add things to it
+        const titlechid = document.createElement("div");
+        const descriptionchid = document.createElement("div");
+        const buttonchildren = document.createElement("button");
+        
+        titlechid.innerHTML=title;
+        descriptionchid.innerHTML=description;
+        buttonchildren.innerHTML="Mark as Done";
+        buttonchildren.setAttribute("onclick",`markasDone(${id})`);
+
+        outerdiv.appendChild(titlechid);
+        outerdiv.appendChild(descriptionchid);
+        outerdiv.appendChild(buttonchildren);
+        outerdiv.setAttribute("id",id);
+        return outerdiv;
+    }
+    // function addtodo(){
+    //     const title = document.getElementById("title").value;
+    //     const description = document.getElementById("description").value;
+    //     // console.log(title,description);
+    //     //appends to the div container
+
+    //     const parent = document.getElementById("container");
+    //     parent.appendChild(createchild(title,description,id++));
+        
+        
+
+    // }
+    function updatestate(state){
+        const parent =document.getElementById("container");
+        parent.innerHTML = "";
+        for(let i = 0; i < state.length;i++){
+            const child  = createchild(state[i].title,state[i].description,state[i].id);
+            parent.appendChild(child);
+        }
+    }
+    window.setInterval(async ()=>{
+        const res = await fetch("https://sum-server.100xdevs.com/todos")
+        const json = await res.json();
+        updatestate(json.todos);
+    },5000)
+    
+
+</script>
+</html>
