@@ -1,6 +1,5 @@
 const mongoose = require('mongoose');
-mongoose.connect("mongodb+srv://kuldeep:simon@cluster0.ygqebfp.mongodb.net/?retryWrites=true")
-const  AdminSchema = new mongoose.Schema({
+mongoose.connect("")
     username:String,
     password:String
 })
