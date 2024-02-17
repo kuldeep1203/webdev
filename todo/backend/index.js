@@ -41,7 +41,7 @@ app.get("/todos", async function(req, res) {
 app.put("/marked",updateware,checkava,async function(req,res){
     try{
         await todo.findOneAndUpdate({
-            title:req.body.id
+            _id:req.body.id
         },{
             completed:true
         })
