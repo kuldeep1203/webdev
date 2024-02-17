@@ -1,4 +1,5 @@
 const express = require('express');
+const cors = require('cors')
 const zod  = require('zod');
 const app = express()
 const { todo } = require('C:\\Users\\kulu1\\webdev\\todo\\backend\\db.js');
@@ -8,6 +9,9 @@ const { createware,updateware,checkava } = require('C:\\Users\\kulu1\\webdev\\to
 const port =3000;
 
 app.use(express.json())
+app.use(cors({
+    origin : "http://localhost:5173"
+}))//using cors allows request from any frontend u can also specify urls allowed
 app.listen(port,()=>{
     console.log(`listening on port${port}`)
 });
