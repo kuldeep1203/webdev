@@ -5,8 +5,9 @@ mongoose.connect("mongodb+srv://kuldeep:simon@cluster0.ygqebfp.mongodb.net/perso
 const personalcardSchema = mongoose.Schema({
    Name : String,
    description : String,
+   interests : [String],
    Linkedin : String,
-   Twittter  : String,
+   Twitter  : String,
    Email : String
 });
 

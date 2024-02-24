@@ -4,6 +4,8 @@ const cors = require('cors');
 const app = express();
 const port   = 3000;
 const {personalcard} = require('C:\\Users\\kulu1\\webdev\\personalcard\\backend\\db.js')
+const { create_card } = require('C:\\Users\\kulu1\\webdev\\personalcard\\backend\\middleware.js')
+
 
 app.use(express.json())
 
@@ -15,21 +17,23 @@ app.listen(port,()=>{
     console.log(`listening on port${port}`)
 });
 
-app.post("/prcard",async function(req, res, next){
+app.post("/prcard",create_card,async function(req, res, next){
     const name = req.body.Name;
-    const description = req.body.Description;
-    const LinkedIn = req.body.LinkedIn;
-    const Twittter = req.body.Twittter;
-    const email = req.body.Email;
+    const description = req.body.description;
+    const Linkedin = req.body.Linkedin;
+    const interests = req.body.interests;
+    const Twitter = req.body.Twitter;
+    const Email = req.body.Email;
 
     const pos = await personalcard.create({
         name,
         description,
-        LinkedIn,
+        interests,
+        Linkedin,
         Twitter,
-        email
+        Email
     })
-    if(a){
+    if(pos){
         res.json({
             msg:"to do created"
         })
@@ -42,3 +46,4 @@ app.post("/prcard",async function(req, res, next){
     
    
 })
+
