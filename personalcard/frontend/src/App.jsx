@@ -8,10 +8,12 @@ function App() {
 
   return (
     <>
-      <div >
+      <div style={{ display: 'flex', justifyContent: 'center', marginTop: '50px' }}>
 
         <h1 className="heading">Welcome</h1>
-        
+        <Bootstrap.Button   style={{backgroundColor: '#C7B7A3', borderColor: '#C7B7A3'}}>
+                    Make New Card
+        </Bootstrap.Button>
       </div>
       <div style={{ display: 'flex', justifyContent: 'center', marginTop: '50px'  }}>
       <Bootstrap.Card style={{ width: '18rem',align: 'center' }}>
