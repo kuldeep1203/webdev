@@ -1,0 +1,49 @@
+//useeffect has a function to run and a dependency array =-+-*-+//sum-server.100xdevs.com/todos
+
+//Some components need to synchronize with external systems.
+// For example, you might want to control a non-React component 
+//based on the React state, set up a server connection, or send an analytics log when a component appears on the screen. 
+//Effects let you run some code after rendering so that you can synchronize your component with some system outside of React.
+//sideeffects  - stuff not related to dom such as fetching data andstuff 
+//these things arent part of main react lifecycle
+//access react lifecycle features without writing classes (such as component has mounted or unmounted);
+
+//use effect allows to perform sideeffects in fucntion componenets 
+//-these componenets cannot be done during rendering 
+//it is a replacement to componentDidUpdate and componentWillUnmount etc..
+//like a pitstop in f1..
+//hooks allow u to hook into thereact state and lifecylce features from fucntion components
+
+suppose u want to fetch data from aserver now u dont want to do this everytime the app is rerendered
+due to state change so usign useeffect we can make sure that the fetch call is only done 
+under some conditions , which is return in the dependency array 
+
+//useMemo 
+it means remembering some output given an input and nto relcalculatingit when same input is given to
+
+usecallback 
+used to memoize functions which can help to optimize the performace of your application 
+
+
+if u define any variable like var a =1 ;
+var b == 1
+and a==b be true
+
+they are ony equal by value and not by reference
+
+so when does react actually rerender ?? - when it changes referentially it rerenders
+
+use callback  : prevenets reredner of fucntions,across rereneders fucntion changes referentially  so if no dependency of the function change it will not get rerendered
+
+
+memo - if u wrap a child inside it then child will only rerender if the inputs specific to tthe child has changed and it wont rerender everyitme the parent is rerendered
+
+CUSTOM HOOKS - shld strt with use (naming convention)
+
+--u cant create a raw fucntion and use hooks in it u need to define custome hooks or naother hook to use a hook logic to create
+hence the custome hooks and
+
+
+//state  - is the dynamic things on ur site which change 
+
+
