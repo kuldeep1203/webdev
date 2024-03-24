@@ -6,14 +6,24 @@ import './App.css'
 
 //useeffect has a function to run and a dependency array 
 //sum-server.100xdevs.com/todos
+
+//Some components need to synchronize with external systems.
+// For example, you might want to control a non-React component 
+//based on the React state, set up a server connection, or send an analytics log when a component appears on the screen. 
+//Effects let you run some code after rendering so that you can synchronize your component with some system outside of React.
+
+
 function App() {
   const [todos,setTodos] = useState([]);
   useEffect(()=>{
-    fetch("https://sum-server.100xdevs.com/todos")
-    .then(async (res)=>{
-      const json =await res.json();
-      setTodos(json.todos);
-    })
+    setInterval(()=>{
+      fetch("https://sum-server.100xdevs.com/todos")
+      .then(async (res)=>{
+        const json =await res.json();
+        setTodos(json.todos);
+      })
+    },1000)
+    
   },[]);
 
   return <div>
