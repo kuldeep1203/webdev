@@ -1,0 +1,13 @@
+prop drillings
+
+how should one manage states 
+
+
+keep it as some low level componet 
+push down states as much as posssible 
+
+basicallly if app bar has feed then dont put feed in appbar but a separate componenet so that it can be
+
+Lifting State Up: This principle suggests moving the state to the closest common ancestor component of the components that need access to that state. By doing this, you ensure that the state is managed at a higher level in the component tree, making it easier to share data between components.
+
+Prop Drilling: Prop drilling occurs when you need to pass down props through multiple layers of components to reach a deeply nested component that needs access to those props. While prop drilling is not inherently bad, excessive prop drilling can lead to code that is difficult to maintain and understand.
