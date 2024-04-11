@@ -1,0 +1,9 @@
+Recoil  has a concept of an atom to store the state 
+an atom can define outside the component and can teleported to any component that
+
+RecoilRoots 
+atom 
+useRecoilState 
+useRecoilValue 
+useSetRecoilState 
+selector 
