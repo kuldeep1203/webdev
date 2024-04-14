@@ -1,0 +1,14 @@
+.container {
+  display: flex;
+  margin-top: 300px;
+  justify-content: center;
+  gap: 20px; /* Adjust the gap as per your preference */
+}
+.containerg {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* height: 100vh; */
+}
+
