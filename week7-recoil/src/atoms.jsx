@@ -1,5 +1,5 @@
 
-import { atom } from "recoil";
+import { atom,selector } from "recoil";
 
 export const networkAtom = atom({
     key: "networkAtom",
@@ -19,4 +19,18 @@ export const notificationsAtom = atom({
 export const messagesAtom = atom({
     key: "messagesAtom",
     default: 0
+});
+
+
+// this is basically very similar to useMemo it =calculates totalnotification when the other values change 
+export const totalNotificationsSelector = selector({
+    key: "totalNotifications",
+    get : ({get})=>{
+        const networkAtomCount = get(networkAtom);
+        const jobCount = get(jobsAtom);
+        const notificationCount = get(notificationsAtom);
+        const messageCount = get(messagesAtom);
+
+        return networkAtomCount + jobCount + notificationCount + messageCount;
+    }
 });
