@@ -1,4 +1,6 @@
 import { atom, selector } from "recoil";
+import axios from "axios";
+
 export const notifications = atom({
 key: "networkAtom",
 default: selector({
