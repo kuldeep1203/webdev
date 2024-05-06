@@ -6,3 +6,4 @@ export const todosAtomFamily = atomFamily({
         return TODOS.find(x=>x.id === id) // GIVEN  this id find this specific id data from TODOS 
     },
 });
+
