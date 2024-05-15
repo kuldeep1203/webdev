@@ -48,7 +48,7 @@ app.put("/marked",updateware,checkava,async function(req,res){
             _id:req.body.id
         },{
             completed:true
-        })
+        })``
         res.json({msg : 'update completed'})
     }
     catch(err){
