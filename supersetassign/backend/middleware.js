@@ -1,5 +1,5 @@
-const {movieDetail} =  require('C:\\Users\\kulu1\\webdev\\supersetassign\\backend\\config\\db.js');
-const {movieSchema} = require('C:\\Users\\kulu1\\webdev\\supersetassign\\backend\\types.js')
+const {movieDetail} =  require('./config/db');
+const {movieSchema} = require('./types')
 
 
 function validateMovie(req, res, next) {
@@ -25,6 +25,7 @@ async function movieExists(req, res, next){
         
         
         const existingMovie = await movieDetail.findOne({ Name: name });
+        console.log(name)
         
         if (existingMovie) {
            

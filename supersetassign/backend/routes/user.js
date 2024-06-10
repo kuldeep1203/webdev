@@ -1,6 +1,6 @@
 const express = require('express');
-const {movieDetail} =  require('C:\\Users\\kulu1\\webdev\\supersetassign\\backend\\config\\db.js');
-const {validate,me} = require('C:\\Users\\kulu1\\WEBDEV\\supersetassign\\backend\\middleware.js')
+const {movieDetail} =  require('../config/db');
+const {validate,me} = require('../middleware')
 const router = express.Router();
 
 
@@ -51,6 +51,7 @@ router.delete('/moviesDelete', async (req, res) => {
         const deletedMovie = await movieDetail.findOneAndDelete({ Name: movieName });
 
         if (deletedMovie) {
+            
             res.status(200).json({ message: `Deleted movie: ${movieName}` });
         } else {
             res.status(404).json({ message: `Movie '${movieName}' not found` });

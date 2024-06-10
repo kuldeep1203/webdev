@@ -6,8 +6,8 @@ const en = require('dotenv')
 en.config()
 app.use(express.json());
 app.use(cors());
-const rootRouter = require("C:\\Users\\kulu1\\WEBDEV\\supersetassign\\backend\\routes\\index.js");
-const port =3000;
+const rootRouter = require("./routes/index");
+const port =process.env.PORT;
 app.use("/api/assign", rootRouter);
 
 
