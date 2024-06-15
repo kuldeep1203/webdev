@@ -1,0 +1,6 @@
+{"img":"https://farm3.staticflickr.com/2220/1572613671_7311098b76_z_d.jpg","level":"debug","message":"payload:","name":"interstellar","summary":"kfeofeofain"}
+{"img":"https://farm3.staticflickr.com/2220/1572613671_7311098b76_z_d.jpg","level":"debug","message":"payload:","name":"interstellar","summary":"kfeofeofain"}
+{"img":"https://farm3.staticflickr.com/2220/1572613671_7311098b76_z_d.jpg","level":"debug","message":"payload:","name":"interstellar"}
+{"issues":[{"code":"invalid_type","expected":"string","message":"Required","path":["summary"],"received":"undefined"}],"level":"error","name":"ZodError"}
+{"img":"https://farm3.staticflickr.com/2220/1572613671_7311098b76_z_d.jpg","level":"debug","message":"payload:","name":"interstellar"}
+{"issues":[{"code":"invalid_type","expected":"string","message":"Required","path":["summary"],"received":"undefined"}],"level":"error","name":"ZodError"}

@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "NODE_ENV=youtube node index.js"
   },
   "author": "",
   "license": "ISC",
@@ -14,6 +14,7 @@
     "express": "^4.19.2",
     "mongoose": "^8.4.1",
     "vincent": "^0.0.5",
+    "winston": "^3.13.0",
     "zod": "^3.23.8"
   }
 }
