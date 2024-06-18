@@ -17,3 +17,4 @@
 // const value = sum(1,2);
 // console.log(value);
 
+//interfaces -- assign type to objects 
