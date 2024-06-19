@@ -14,8 +14,8 @@
 
 // // printname2()
 
-import { EventEmitter } from 'events'; //es script 
-import {util} from 'util';
+// import { EventEmitter } from 'events'; //es script 
+// import {util} from 'util';
 
 
 // var myEmitter = new EventEmitter();
@@ -26,6 +26,7 @@ import {util} from 'util';
 // })
 
 // myEmitter.emit('click',2,4)
+
 
 
 
